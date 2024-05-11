@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lubay</title>
   <base href="./">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,6 +75,12 @@
                 <img src="assets/img/profile.jpg" alt="Profile Image" />
             </div> -->
 
+            <div id="scrollHeader" class="scroll-header">
+            <p style="font-size: 25px; text-align: center;">Nice meeting you! Do you also like blueberry cheesecakes? If you do, you're a good guy.
+              </p>
+              <p style="font-size: 25px; text-align: center; margin-top: 20px;">I am Robert, and I like blueberry cheesecakes.</p>
+          </div>
+
             <div class="profile">
                 <h1>Basic Information</h1>
                 <p><span class="icon-profile"><img src="assets/img/birthday-cake.879x1024.png" alt="Birthday Icon" /></span> <strong>Birthday:</strong> October 13, 2003</p>
@@ -98,5 +105,25 @@
             </div>
         </div>
     </div>
+
+
+    
+  <script>
+    
+    const scrollHeader = document.getElementById('scrollHeader');
+
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        scrollHeader.classList.add('active');
+      } else {
+        scrollHeader.classList.remove('active');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+  </script>
+  
   </body>
 </html>
+
+
